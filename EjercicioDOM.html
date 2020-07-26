@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Ejercicio 11 - DOM b�sico</title>
+<title>Ejercicio 11 - DOM básico</title>
 <script type="text/javascript">
 window.onload = function() {
 	// Número de enlaces de la pagina
@@ -13,10 +13,18 @@ window.onload = function() {
 	console.log("Ve al penúltimo enlace ="+ link);
 	  
 	// Número de enlaces que apuntan a http://prueba
-	
-
+	var indice = 0;
+		for(var index=0; index <enlace.length; index++) {
+			if(enlace [index].href == "http://prueba/") {
+			indice++;
+			}
+		}
+	   console.log("Número de enlaces que apuntan a http://prueba/ es:"+indice);
+	   
 	// Número de enlaces del tercer párrafo
-
+	var tercer = document.getElementsByTagName("p");
+	enlace = tercer[2].getElementsByTagName("a");  
+      console.log("Número de enlaces del tercer párrafo="+enlace.length);
 }
 </script>
 </head>
