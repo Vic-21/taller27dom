@@ -2,15 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Ejercicio 11 - DOM b�sico</title>
-<script type="text/javascript" src="./script27.js">
+<script type="text/javascript">
 window.onload = function() {
-	// Numero de enlaces de la pagina
+	// Número de enlaces de la pagina
+	var enlace = document.getElementsByTagName("a");
+	console.log("Número de enlaces de la página ="+enlace.length);
 
-	// Direccion del penultimo enlace
+	// Dirección del penultimo enlace
+	var link = enlace [enlace.length-2].href;
+	console.log("Ve al penúltimo enlace ="+ link);
+	  
+	// Número de enlaces que apuntan a http://prueba
+	
 
-	// Numero de enlaces que apuntan a http://prueba
-
-	// Numero de enlaces del tercer p�rrafo
+	// Número de enlaces del tercer párrafo
 
 }
 </script>
